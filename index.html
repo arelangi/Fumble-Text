@@ -1,0 +1,152 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<style>
+		input{
+			margin-top: 1%;
+			margin-left: 5%;
+			margin-bottom: 3%;
+		}
+
+		input.rounded {
+			border: 1px solid #ccc;
+			width:38%;
+			-moz-border-radius: 10px;
+			-webkit-border-radius: 10px;
+			border-radius: 10px;
+			-moz-box-shadow: 2px 2px 3px #666;
+			-webkit-box-shadow: 2px 2px 3px #666;
+			box-shadow: 1px 1px 1px #666;
+			font: normal 13px/100% Verdana, Tahoma, sans-serif; 
+			padding: 4px 7px;
+			outline: 0;
+			-webkit-appearance: none;
+		}
+
+		input.rounded:focus {
+			border-color: #339933;
+		}
+
+		 #explainer{
+		 	width:38%;
+		 	float: left;
+		 }
+
+		 #app{
+		 	width:62%;
+		 	margin-left: 38%;
+		 	font: normal 13px/100% Verdana, Tahoma, sans-serif; 
+		 }
+
+		 div{
+		 	margin-top: 5%;
+		 }
+
+		 body{
+		 	width:100%;
+		 	font-family: 'Helvetica Neue', sans-serif;
+		 	font-size: 16px;
+		 	line-height: 30px;
+		 	background-color: #fff;
+		 	color: #000;
+		 }
+
+		 #btn{
+		 	background-color: #c00;
+		 	color: #fff;
+		 }
+
+		 .styled-button-5 {
+			background-color:#ed8223;
+			color:#fff;
+			font: normal 13px/100% Verdana, Tahoma, sans-serif;
+			line-height:30px;
+			border-radius:20px;
+			-webkit-border-radius:20px;
+			-moz-border-radius:20px;
+			border:0;
+			text-shadow:#C17C3A 0 -1px 0;
+			width:25%;
+			height:6%;
+		}  
+
+		 textarea { 
+		    padding: 9px; 
+		    border: solid 1px #E5E5E5; 
+		    outline: 0; 
+		    font: normal 16px/100% Verdana, Tahoma, sans-serif; 
+		    width: 200px; 
+		    
+		    box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+		    -moz-box-shadow: 2px 2px 3px #666;
+			-webkit-box-shadow: 2px 2px 3px #666;
+			box-shadow: 1px 1px 1px #666;
+		    -moz-border-radius: 10px;
+			-webkit-border-radius: 10px;
+			border-radius: 10px;
+		    } 
+		  
+		textarea{
+		 	width: 85%;
+		 	height: 60%;
+		 	margin-left: 5%;
+		 	margin-top:2%;
+		 	margin-bottom: 3%;
+		 }
+		   
+		textarea:hover, 
+		textarea:focus { 
+		    border-color: #C9C9C9; 
+		    -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 8px; 
+		}         
+	</style>
+</head>
+<body>
+
+	<div id="explainer">
+		Hello,<br/> This is a small javascript application that encrypts/decrypts your text given a secret password.
+
+
+
+	</div>
+
+	<div id="app">
+		<textarea placeholder="This is where your message goes" ></textarea>
+		<input id="password" class="rounded" placeholder="This is for a strong password" type="password"/>
+		<input type="radio" name="op" value="e" />Encrpyt
+		<input type="radio" name="op" value="d" />Decrpyt
+		<br/>
+		<input class="styled-button-5" type="button" value="Encrypt/Decrypt">
+	</div>
+
+</body>
+<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/aes.js"></script>
+<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/components/enc-base64-min.js"></script>
+<script>
+
+	function encrypt(){
+
+	}
+
+	function decrypt(){
+
+	}
+
+	var msg = "Message";
+	var secret = "Secret Passphrase"
+
+    var encrypted = CryptoJS.AES.encrypt(msg, secret);
+
+    //alert(encrypted.key);        // 74eb593087a982e2a6f5dded54ecd96d1fd0f3d44a58728cdcd40c55227522223
+    //alert(encrypted.iv);         // 7781157e2629b094f0e3dd48c4d786115
+    //alert(encrypted.salt);       // 7a25f9132ec6a8b34
+    //alert(encrypted.ciphertext); // 73e54154a15d1beeb509d9e12f1e462a0
+
+    //alert(encrypted);            // U2FsdGVkX1+iX5Ey7GqLND5UFUoV0b7rUJ2eEvHkYqA=
+
+
+    var decrypted = CryptoJS.AES.decrypt(encrypted, secret);
+    //alert(hash.toString(CryptoJS.enc.Latin1)); 
+</script>
+</html>
