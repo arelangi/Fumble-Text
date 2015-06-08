@@ -123,8 +123,8 @@
 		<label id="txtalert"></label>
 		<br/>
 		<input id="pw_phrase" class="rounded" placeholder="This is for a strong password" type="password" onkeyup="pw_strength();" required/>
-		<input type="radio" name="op" id="enc" value="e" checked = "checked" onclick="radioSelect();" />Encrpyt
-		<input type="radio" name="op" id="dec" value="d" onclick="radioSelect();" />Decrpyt
+		<input type="radio" name="op" id="enc" value="e" checked = "checked" onclick="radioSelect();" />Encrypt
+		<input type="radio" name="op" id="dec" value="d" onclick="radioSelect();" />Decrypt
 		<br/>
 		<label>Password strength: </label><label id="strength"></label>
 		<br/>
@@ -132,8 +132,10 @@
 	</div>
 
 </body>
+<!-- <script src="cryptojs/rollups/aes.js"></script>
+<script src="cryptojs/components/enc-base64-min.js"></script> -->
 <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/aes.js"></script>
-<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/components/enc-base64-min.js"></script>
+
 <script src="zxcvbn/zxcvbn.js"></script>
 <script>
 	function radioSelect(){
